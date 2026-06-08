@@ -1,0 +1,34 @@
+<svg width="1280" height="320" viewBox="0 0 1280 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PTY flights pricing data pipeline banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#07111F"/>
+      <stop offset="0.55" stop-color="#0B1F3A"/>
+      <stop offset="1" stop-color="#17324D"/>
+    </linearGradient>
+    <style>
+      .title{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:44px;font-weight:750;fill:#fff}
+      .sub{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:22px;fill:#D8E2F0}
+      .small{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:14px;font-weight:650;fill:#fff}
+    </style>
+  </defs>
+  <rect width="1280" height="320" rx="26" fill="url(#bg)"/>
+  <path d="M860 88 C940 40 1030 45 1092 96 C1135 130 1160 174 1220 182" stroke="#58A6FF" stroke-width="4" opacity=".55" fill="none"/>
+  <path d="M860 210 C965 260 1060 240 1190 272" stroke="#2EA043" stroke-width="4" opacity=".50" fill="none"/>
+  <g opacity=".28">
+    <circle cx="900" cy="95" r="10" fill="#58A6FF"/>
+    <circle cx="1020" cy="70" r="10" fill="#58A6FF"/>
+    <circle cx="1110" cy="115" r="10" fill="#58A6FF"/>
+    <circle cx="970" cy="238" r="10" fill="#2EA043"/>
+    <circle cx="1080" cy="230" r="10" fill="#2EA043"/>
+    <circle cx="1190" cy="272" r="10" fill="#2EA043"/>
+  </g>
+  <text x="74" y="104" class="title">PTY Flights Pricing</text>
+  <text x="74" y="150" class="sub">Operational Data Pipeline</text>
+  <text x="74" y="188" class="sub">REST APIs · Python · Scheduled Jobs · Calendar Output · Alerts</text>
+  <rect x="74" y="232" width="130" height="36" rx="18" fill="#0D419D"/>
+  <text x="102" y="255" class="small">API Ingestion</text>
+  <rect x="220" y="232" width="122" height="36" rx="18" fill="#1A7F37"/>
+  <text x="250" y="255" class="small">Automation</text>
+  <rect x="358" y="232" width="130" height="36" rx="18" fill="#6E40C9"/>
+  <text x="386" y="255" class="small">DataOps</text>
+</svg>
