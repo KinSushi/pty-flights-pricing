@@ -2,6 +2,10 @@
 
 <div align="center">
 
+<img src="assets/pty-pipeline-banner.svg" alt="PTY Flights Pricing pipeline banner" width="100%"/>
+
+<br/>
+
 **Python automation pipeline turning flight-arrival data into daily pricing signals**
 
 Python · REST APIs · Google Calendar · Email alerting · Ubuntu · Cron · Idempotent updates
