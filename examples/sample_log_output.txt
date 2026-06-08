@@ -1,0 +1,6 @@
+2026-03-01T11:00:00Z INFO pty_sync start rolling_window_days=7 airport=MPTO
+2026-03-01T11:00:02Z INFO api fetch_success date=2026-03-02 arrivals=142
+2026-03-01T11:00:03Z INFO signal computed date=2026-03-02 tier=MODERATE peak_hour=18
+2026-03-01T11:00:04Z INFO calendar upsert_success date=2026-03-02 event_id=<sanitized>
+2026-03-01T11:00:05Z INFO email send_success recipient=<sanitized>
+2026-03-01T11:00:05Z INFO pty_sync completed duration_seconds=5
