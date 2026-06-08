@@ -25,6 +25,16 @@ The business use case is short-term rental pricing in Panama City, but the engin
 
 ---
 
+## Documentation index
+
+| Document | Purpose |
+|---|---|
+| [PORTFOLIO.md](PORTFOLIO.md) | Recruiter-facing explanation of the DataOps signal |
+| [OPERATIONS.md](OPERATIONS.md) | Runtime expectations, health checks, failure modes and incident template |
+| [README.md](README.md) | Architecture, setup, operational controls and portfolio bridge |
+
+---
+
 ## Problem statement
 
 Short-term rental platforms often rely on static or delayed pricing signals. Tocumen International Airport (PTY / MPTO) receives a high daily volume of arrivals, which can act as a local proxy for short-term demand.
