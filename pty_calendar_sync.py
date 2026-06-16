@@ -5,7 +5,10 @@ SOVRALYS / Enzo Chareyron Di Bacco
 Cron : 0 11 * * * /usr/bin/python3 /opt/pty_sync/pty_calendar_sync.py >> /var/log/pty_sync.log 2>&1
 """
 
-import os, requests, smtplib, pickle
+import os
+import requests
+import smtplib
+import pickle
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import datetime, timedelta, timezone
@@ -77,7 +80,7 @@ def aggregate_day(arrivals, date_str):
         t = v.get("arrival", {}).get("scheduledTime", {}).get("local", "")
         try:
             hours[int(t[11:13])] += 1
-        except:
+        except Exception:
             pass
     peak_hour = max(hours, key=hours.get) if hours else 0
     top_origins = sorted(origins.items(), key=lambda x: -x[1])[:5]
@@ -97,7 +100,7 @@ def upsert_event(service, calendar_id, agg):
     desc = (f"PTY ARRIVALS — {agg['date_str']}\n"
             f"Total flights : {agg['total']}\nPeak : {agg['peak_hour']:02d}:00 ({agg['peak_count']} flights)\n\n"
             f"Top origins :\n" + "\n".join(f"  {k}: {v}" for k,v in agg["top_origins"]) +
-            f"\n\nTop airlines :\n" + "\n".join(f"  {k}: {v}" for k,v in agg["top_airlines"]) +
+            "\n\nTop airlines :\n" + "\n".join(f"  {k}: {v}" for k,v in agg["top_airlines"]) +
             f"\n\nSIGNAL : {agg['signal']}\nACTION : {agg['action']}\nSource : AeroDataBox / RapidAPI")
     body = {"summary": agg["title"], "description": desc,
             "start": {"date": agg["date_str"], "timeZone": "America/Panama"},
@@ -179,7 +182,7 @@ def main():
         upsert_event(service, calendar_id, agg)
         days_data.append(agg)
     send_pricing_alert(days_data)
-    print(f"\nSync complete\n")
+    print("\nSync complete\n")
 
 if __name__ == "__main__":
     main()
