@@ -72,7 +72,7 @@ Production-style Python data pipeline that ingests flight-arrival data, transfor
 
 ## Why this repo matters
 
-This is a personal business project, but the engineering pattern is directly transferable to DataOps, Application Support and Junior Data Engineering roles:
+This is a personal business project, but the engineering pattern is directly transferable to DataOps, Application Support and Data Engineering roles:
 
 - external API ingestion;
 - scheduled execution on Linux;
@@ -105,7 +105,7 @@ This is a personal business project, but the engineering pattern is directly tra
 
 > The project shows how I monitor and operate a scheduled data workflow, reason about retries, avoid duplicate outputs and document production constraints.
 
-### For Junior Data Engineer
+### For Data Engineer
 
 > The project shows a complete ingestion-to-output pipeline: external API, Python transformation, scheduled execution and downstream operational consumers.
 
