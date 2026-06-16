@@ -49,25 +49,16 @@ Short-term rental platforms often rely on static or delayed pricing signals. Toc
 
 ## Architecture
 
-```text
-AeroDataBox API via RapidAPI
-        |
-        | REST polling — rolling 7-day window
-        v
-Python pipeline on Ubuntu
-        |
-        | Validate response · aggregate arrivals · derive demand tier
-        v
-Operational outputs
-        |
-        |-- Google Calendar API v3
-        |     |-- idempotent event upserts
-        |     +-- color-coded demand signals
-        |
-        +-- Gmail SMTP
-              +-- HTML alert email with direct action link
-
-Cron schedule: daily at 06:00 Panama / 11:00 UTC
+```mermaid
+flowchart TD
+    A[AeroDataBox API<br/>via RapidAPI] -->|REST polling — rolling 7-day window| P[Python pipeline on Ubuntu]
+    P -->|validate response · aggregate arrivals · derive demand tier| O{Operational outputs}
+    O --> GC[Google Calendar API v3]
+    GC --> GC1[idempotent event upserts]
+    GC --> GC2[color-coded demand signals]
+    O --> GM[Gmail SMTP]
+    GM --> GM1[HTML alert email<br/>with direct action link]
+    CRON[(cron · daily 06:00 Panama / 11:00 UTC)] -.->|triggers| P
 ```
 
 ---
